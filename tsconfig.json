@@ -1,0 +1,64 @@
+{
+    "compilerOptions": {
+        // 目标 JS 版本
+        "target": "ES2020",
+        // 模块系统
+        "module": "ESNext",
+        // 模块解析策略
+        "moduleResolution": "node",
+        // 启用所有严格的类型检查选项
+        "strict": true,
+        // 允许从没有默认导出的模块中默认导入
+        "allowSyntheticDefaultImports": true,
+        // 启用装饰器
+        "experimentalDecorators": true,
+        // 生成装饰器元数据
+        "emitDecoratorMetadata": true,
+        // 允许导入 JSON 模块
+        "resolveJsonModule": true,
+        // 允许使用 import.meta
+        "importsNotUsedAsValues": "remove",
+        // 跳过库检查
+        "skipLibCheck": true,
+        // 确保每个文件可以在不依赖其他导入的情况下被编译
+        "isolatedModules": true,
+        // 源码映射
+        "sourceMap": true,
+        // 在 .tsx 文件里支持 JSX
+        "jsx": "preserve",
+        // 编译输出目录
+        "outDir": "dist",
+        // 根目录
+        "rootDir": "src",
+        // 基础目录
+        "baseUrl": ".",
+        // 路径别名
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        },
+        // 类型定义文件
+        "typeRoots": [
+            "node_modules/@types",
+            "src/types"
+        ],
+        // 额外包含的库
+        "lib": [
+            "ESNext",
+            "DOM",
+            "DOM.Iterable"
+        ]
+    },
+    // 包含的文件
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue"
+    ],
+    // 排除的文件
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
